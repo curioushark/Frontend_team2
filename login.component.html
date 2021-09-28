@@ -1,9 +1,30 @@
-<h3>MASUK</h3>
-<div style="width: 400px;">
-  <form (ngSubmit)="submit()">
-    <div class="form-group">
-      <label >No Rekening</label>
-      <input type="text" class="form-control"  name="accNumber" required [(ngModel)]="accCust.accNumber" maxlength="8">
+<style>
+  button{
+    background-color: springgreen;
+    border: greenyellow;
+    font-style: unset;
+    font-size: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 100px;
+  }
+  body{
+    background-color: green;
+    color: white;
+    width: 1080px;
+    height: 250px;
+  }
+  form{
+    display: inline-block;
+  }
+
+</style>
+<body>
+<h3 style="text-align: center;">SIGN IN</h3>
+<div style="text-align: center;" >
+  <form (ngSubmit)="submit()" style="width:300px;">
+    <div class="form-group" >
+      <label >ACCOUNT NUMBER</label>
+      <input type="text" class="form-control"  name="accNumber" required [(ngModel)]="accCust.accNumber" maxlength="8" >
     </div>
     <div class="form-group">
       <label >PIN</label>
@@ -12,7 +33,7 @@
 
     <br/>
     <button  type="submit" class="btn btn-success" >Submit</button>
-    <button style="margin-left: 20px;" class="btn btn-primary" (click)="back()">kembali</button>
+    <button style="margin-left: 20px;" class="btn btn-primary" (click)="back()">Back</button>
   </form>
-
 </div>
+</body>
